@@ -100,4 +100,80 @@ def process_survey_data(values_file, labels_file, dataset_name=None):
     if num_numeric_labels > 0:
         print("WARNING: It appears your Label columns contain numeric values. Please check if you uploaded the correct 'Labels' file (Choice Text).")
 
+
     return merged_data
+
+from docx import Document
+from docx.shared import Pt
+
+def generate_docx_dictionary(df):
+    """
+    Generates a DOCX Data Dictionary from the merged dataframe.
+    
+    Args:
+        df: The merged pd.DataFrame containing (Value) and (Label) columns.
+        
+    Returns:
+        BytesIO: The DOCX file in memory.
+    """
+    doc = Document()
+    doc.add_heading('Data Dictionary', 0)
+    
+    # Identify Question Groups
+    # We look for columns ending in " (Value)"
+    # The corresponding label column should be " (Label)"
+    
+    # We iterate through columns 
+    # The structure is usually: Q1 (Value), Q1 (Label), Q2 (Value), Q2 (Label)...
+    
+    processed_bases = set()
+    
+    for col in df.columns:
+        if col.endswith(" (Value)"):
+            base_name = col[:-len(" (Value)")] # e.g. "Q1. Question Text"
+            
+            if base_name in processed_bases:
+                continue
+                
+            processed_bases.add(base_name)
+            
+            label_col = f"{base_name} (Label)"
+            if label_col not in df.columns:
+                continue # Skip if no matching label column
+            
+            # --- Add Section for this Question ---
+            doc.add_heading(base_name, level=2)
+            
+            # Extract Unique Pairs
+            # Drop duplicates and N/A
+            pairs = df[[col, label_col]].drop_duplicates().dropna()
+            
+            # Sort by Value (try numeric sort if possible)
+            try:
+                pairs['sort_key'] = pd.to_numeric(pairs[col])
+                pairs = pairs.sort_values('sort_key')
+            except:
+                pairs = pairs.sort_values(col)
+            
+            # Create Table
+            table = doc.add_table(rows=1, cols=2)
+            table.style = 'Table Grid'
+            
+            # Header
+            hdr_cells = table.rows[0].cells
+            hdr_cells[0].text = 'Value (SPSS)'
+            hdr_cells[1].text = 'Label'
+            
+            # Data Rows
+            for index, row in pairs.iterrows():
+                row_cells = table.add_row().cells
+                row_cells[0].text = str(row[col])
+                row_cells[1].text = str(row[label_col])
+                
+            doc.add_paragraph() # Spacer
+            
+    # Save to BytesIO
+    f = io.BytesIO()
+    doc.save(f)
+    f.seek(0)
+    return f
