@@ -72,44 +72,71 @@ with st.sidebar:
 
 # --- Processing Logic ---
 if process_btn:
-    # 1. Validation
-    if not (pre_labels_file and pre_values_file and post_labels_file and post_values_file):
-        st.error("Please upload all four files (Pre-Set and Post-Set) to proceed.")
+    # 1. Validation Logic
+    has_pre = pre_labels_file is not None and pre_values_file is not None
+    has_post = post_labels_file is not None and post_values_file is not None
+    
+    if not (has_pre or has_post):
+        st.error("Please upload at least one complete set of data (Labels AND Values) for either Pre-Survey or Post-Survey.")
         st.stop()
         
     try:
         with st.spinner("Processing datasets..."):
-            # 2. Process Pre-Set
-            # Reset file pointers just in case
-            pre_values_file.seek(0)
-            pre_labels_file.seek(0)
-            pre_merged_df = process_survey_data(pre_values_file, pre_labels_file)
             
-            # 3. Process Post-Set
-            post_values_file.seek(0)
-            post_labels_file.seek(0)
-            post_merged_df = process_survey_data(post_values_file, post_labels_file)
-            
-            # 4. Generate Separated Excel Files
-            
-            # Pre-Survey Output
-            pre_output = io.BytesIO()
-            with pd.ExcelWriter(pre_output, engine='openpyxl') as writer:
-                pre_merged_df.to_excel(writer, sheet_name='Pre-Survey', index=False)
-            pre_data = pre_output.getvalue()
+            # --- PRE-SURVEY PROCESSING ---
+            pre_data = None
+            pre_merged_df = None
+            if has_pre:
+                # Reset file pointers just in case
+                pre_values_file.seek(0)
+                pre_labels_file.seek(0)
+                pre_merged_df = process_survey_data(pre_values_file, pre_labels_file)
+                
+                # Generate Output
+                pre_output = io.BytesIO()
+                with pd.ExcelWriter(pre_output, engine='openpyxl') as writer:
+                    pre_merged_df.to_excel(writer, sheet_name='Pre-Survey', index=False)
+                pre_data = pre_output.getvalue()
 
-            # Post-Survey Output
-            post_output = io.BytesIO()
-            with pd.ExcelWriter(post_output, engine='openpyxl') as writer:
-                post_merged_df.to_excel(writer, sheet_name='Post-Survey', index=False)
-            post_data = post_output.getvalue()
+            # --- POST-SURVEY PROCESSING ---
+            post_data = None
+            post_merged_df = None
+            if has_post:
+                post_values_file.seek(0)
+                post_labels_file.seek(0)
+                post_merged_df = process_survey_data(post_values_file, post_labels_file)
+                
+                # Generate Output
+                post_output = io.BytesIO()
+                with pd.ExcelWriter(post_output, engine='openpyxl') as writer:
+                    post_merged_df.to_excel(writer, sheet_name='Post-Survey', index=False)
+                post_data = post_output.getvalue()
             
             # 5. Success & Downloads
-            st.success("✅ Data processed successfully! Download your files below.")
+            st.success("✅ Processing complete! Download your files below.")
             
-            col1, col2 = st.columns(2)
+            # Dynamic Columns for Download Buttons
+            # If both exist, use 2 columns. If only one, just use st.write/download directly.
             
-            with col1:
+            if has_pre and has_post:
+                col1, col2 = st.columns(2)
+                with col1:
+                    st.download_button(
+                        label="📥 Download PRE-Survey Data",
+                        data=pre_data,
+                        file_name="Pre_Survey_Merged.xlsx",
+                        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                        use_container_width=True
+                    )
+                with col2:
+                    st.download_button(
+                        label="📥 Download POST-Survey Data",
+                        data=post_data,
+                        file_name="Post_Survey_Merged.xlsx",
+                        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                        use_container_width=True
+                    )
+            elif has_pre:
                 st.download_button(
                     label="📥 Download PRE-Survey Data",
                     data=pre_data,
@@ -117,8 +144,7 @@ if process_btn:
                     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
                     use_container_width=True
                 )
-                
-            with col2:
+            elif has_post:
                 st.download_button(
                     label="📥 Download POST-Survey Data",
                     data=post_data,
@@ -132,13 +158,18 @@ if process_btn:
             # Previews
             st.subheader("Data Previews")
             
-            with st.expander("Preview: Pre-Survey Data (First 5 Rows)", expanded=True):
-                st.dataframe(pre_merged_df.head(), use_container_width=True)
-                
-            with st.expander("Preview: Post-Survey Data (First 5 Rows)", expanded=False):
-                st.dataframe(post_merged_df.head(), use_container_width=True)
+            if has_pre:
+                with st.expander("Preview: Pre-Survey Data (First 5 Rows)", expanded=True):
+                    st.dataframe(pre_merged_df.head(), use_container_width=True)
+            
+            if has_post:
+                with st.expander("Preview: Post-Survey Data (First 5 Rows)", expanded=True):
+                    st.dataframe(post_merged_df.head(), use_container_width=True)
 
     except Exception as e:
         st.error(f"An error occurred during processing: {str(e)}")
-        for file in [pre_labels_file, pre_values_file, post_labels_file, post_values_file]:
-            if file: file.seek(0) # Reset on error
+        # Attempt reset
+        if pre_labels_file: pre_labels_file.seek(0)
+        if pre_values_file: pre_values_file.seek(0)
+        if post_labels_file: post_labels_file.seek(0)
+        if post_values_file: post_values_file.seek(0)
