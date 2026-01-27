@@ -45,7 +45,7 @@ def process_survey_data(values_file, labels_file, dataset_name=None):
         # Custom Header Logic for Q22 (RecordID)
         # If dataset_name key is provided (e.g. 'pre' or 'post'), rename Q22
         if dataset_name and q.startswith("Q22"):
-             new_headers.append(f"RecordID ({dataset_name})")
+             new_headers.append("RecordID")
         else:
              new_headers.append(f"{q}. {t}")
     

@@ -177,8 +177,8 @@ if process_btn:
             def count_duplicates(df, dataset_name):
                 if df is None: return 0
                 # Look for column starting with RecordID and ending with (Value)
-                # The format we set is "RecordID ({dataset_name}) (Value)"
-                target_col = f"RecordID ({dataset_name}) (Value)"
+                # The format we set is "RecordID (Value)"
+                target_col = "RecordID (Value)"
                 if target_col in df.columns:
                     return df.duplicated(subset=[target_col]).sum()
                 return 0
