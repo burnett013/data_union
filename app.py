@@ -214,3 +214,107 @@ if process_btn:
         if pre_values_file: pre_values_file.seek(0)
         if post_labels_file: post_labels_file.seek(0)
         if post_values_file: post_values_file.seek(0)
+
+# --- SPSS Preparation Section ---
+st.write("---")
+st.header("Step 2: Prepare for SPSS (CSV Export)")
+
+st.markdown("""
+Upload your **merged Excel files** (generated above) to convert them into SPSS-ready CSVs.
+*   Removes duplicate ID columns.
+*   Renames columns with `pre_` or `post_` prefixes.
+""")
+
+col_spss_pre, col_spss_post = st.columns(2)
+
+with col_spss_pre:
+    st.subheader("Process Pre-Survey")
+    spss_pre_file = st.file_uploader("Upload Merged Pre-Survey (XLSX)", type=['xlsx'], key="spss_pre")
+
+with col_spss_post:
+    st.subheader("Process Post-Survey")
+    spss_post_file = st.file_uploader("Upload Merged Post-Survey (XLSX)", type=['xlsx'], key="spss_post")
+
+import re
+
+def clean_for_spss(df, prefix):
+    """
+    Cleans DataFrame for SPSS:
+    1. Removes 'RecordID (Value)' column.
+    2. Renames 'RecordID (Label)' -> 'RecordID'.
+    3. Renames other columns Qx... -> prefix_Qx...
+    """
+    # 1 & 2. Handle RecordID
+    # Drop Value version
+    if "RecordID (Value)" in df.columns:
+        df = df.drop(columns=["RecordID (Value)"])
+    
+    # Rename Label version
+    if "RecordID (Label)" in df.columns:
+        df = df.rename(columns={"RecordID (Label)": "RecordID"})
+        
+    # 3. Rename others
+    new_cols = {}
+    for col in df.columns:
+        if col == "RecordID":
+            continue
+            
+        # Regex to find Q numbers (e.g. "Q1. Question Text (Value)")
+        # We capture "Q" + digits
+        match = re.match(r"^(Q\d+)", col)
+        if match:
+            q_part = match.group(1) # e.g. Q1
+            
+            # Preserve suffix to distinguish Value/Label if needed, 
+            # or just use Q number if user implies 1:1 mapping (but we have 2 cols per Q)
+            # User said: "Rename the remaining columns to pre or post_Qx. Example: pre_Q22, post_Q3"
+            # If we map TWO columns to ONE name, we lose data.
+            # I will assume we suffix: pre_Q1_Value, pre_Q1_Label
+            # But the user example "pre_Q22" is clean.
+            # Let's clean the suffix too.
+            
+            suffix = ""
+            if "(Value)" in col:
+                suffix = "" # Assume Value is the "main" one
+            elif "(Label)" in col:
+                suffix = "_Label"
+            
+            new_name = f"{prefix}_{q_part}{suffix}"
+            new_cols[col] = new_name
+            
+    df = df.rename(columns=new_cols)
+    return df
+
+if spss_pre_file:
+    try:
+        df_pre = pd.read_excel(spss_pre_file)
+        df_pre_clean = clean_for_spss(df_pre, "pre")
+        
+        csv_pre = df_pre_clean.to_csv(index=False).encode('utf-8')
+        
+        col_spss_pre.download_button(
+            label="📥 Download SPSS-Ready CSV (Pre)",
+            data=csv_pre,
+            file_name="Pre_Survey_SPSS.csv",
+            mime="text/csv"
+        )
+        col_spss_pre.success("Ready for download!")
+    except Exception as e:
+        col_spss_pre.error(f"Error: {e}")
+
+if spss_post_file:
+    try:
+        df_post = pd.read_excel(spss_post_file)
+        df_post_clean = clean_for_spss(df_post, "post")
+        
+        csv_post = df_post_clean.to_csv(index=False).encode('utf-8')
+        
+        col_spss_post.download_button(
+            label="📥 Download SPSS-Ready CSV (Post)",
+            data=csv_post,
+            file_name="Post_Survey_SPSS.csv",
+            mime="text/csv"
+        )
+        col_spss_post.success("Ready for download!")
+    except Exception as e:
+        col_spss_post.error(f"Error: {e}")
