@@ -67,6 +67,11 @@ def process_survey_data(values_file, labels_file):
         col_val = col_val.replace('nan', '')
         col_lab = col_lab.replace('nan', '')
         
+        if i > 0:
+            # For non-identifier columns, convert Values to numeric (int)
+            # errors='coerce' turns non-numeric to NaN
+            col_val = pd.to_numeric(col_val, errors='coerce').astype('Int64')
+
         # Add to new DF
         # We can use the header for both, or differentiate. 
         # Typically "Value" and "Label" suffixes help, but user asked for:
