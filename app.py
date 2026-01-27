@@ -165,6 +165,24 @@ if process_btn:
             if has_post:
                 with st.expander("Preview: Post-Survey Data (First 5 Rows)", expanded=True):
                     st.dataframe(post_merged_df.head(), use_container_width=True)
+            
+            # --- KPIs / Statistics ---
+            st.write("---")
+            st.subheader("Dataset Statistics")
+            
+            # Calculate Counts
+            num_pre = len(pre_merged_df) if has_pre and pre_merged_df is not None else 0
+            num_post = len(post_merged_df) if has_post and post_merged_df is not None else 0
+            total_rows = num_pre + num_post
+            
+            kpi1, kpi2, kpi3 = st.columns(3)
+            
+            with kpi1:
+                st.metric(label="Total Combined Rows", value=total_rows)
+            with kpi2:
+                st.metric(label="Pre-Survey Rows", value=num_pre)
+            with kpi3:
+                st.metric(label="Post-Survey Rows", value=num_post)
 
     except Exception as e:
         st.error(f"An error occurred during processing: {str(e)}")
