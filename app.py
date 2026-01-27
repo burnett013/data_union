@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import io
-from processing import process_survey_data
+from processing import process_survey_data, generate_docx_dictionary
 
 # --- Page Configuration ---
 st.set_page_config(
@@ -117,43 +117,65 @@ if process_btn:
             # 5. Success & Downloads
             st.success("✅ Processing complete! Download your files below.")
             
-            # Dynamic Columns for Download Buttons
-            # If both exist, use 2 columns. If only one, just use st.write/download directly.
+            # --- Dynamic Download Columns ---
+            # We want to offer: Pre Data, Post Data, Pre Dict (DOCX), Post Dict (DOCX)
+            # User asked for "a third download button adjacent"
+            # It might be cleaner to group Pre downloads together and Post downloads together, 
+            # OR have Data Layout and Dict Layout.
+            # "I want a third download button adjacent to the pre and post download buttons."
+            # Maybe 3 columns: Pre Data | Post Data | Dictionary (if applicable)
+            # Actually, dictionary is per dataset. So if we have Pre, we have Pre Dict. 
+            # The prompt implies one general desire, but logically we need two dictionaries if we have two datasets, 
+            # or maybe the user implies one combined? Usually they are separate.
+            # Let's create dictionary for EACH available dataset.
             
-            if has_pre and has_post:
-                col1, col2 = st.columns(2)
-                with col1:
+            download_cols = st.columns(3)
+            
+            # Col 1: Pre Survey Downloads
+            if has_pre:
+                with download_cols[0]:
+                    st.write("**Pre-Survey**")
                     st.download_button(
-                        label="📥 Download PRE-Survey Data",
+                        label="📥 Excel Data",
                         data=pre_data,
                         file_name="Pre_Survey_Merged.xlsx",
                         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                        use_container_width=True
+                        use_container_width=True,
+                        key="dl_pre_data"
                     )
-                with col2:
+                    # Generate Pre Dict
+                    pre_dict_io = generate_docx_dictionary(pre_merged_df)
                     st.download_button(
-                        label="📥 Download POST-Survey Data",
+                        label="📘 Data Dictionary (DOCX)",
+                        data=pre_dict_io,
+                        file_name="Pre_Survey_Dictionary.docx",
+                        mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                        use_container_width=True,
+                        key="dl_pre_dict"
+                    )
+
+            # Col 2: Post Survey Downloads
+            if has_post:
+                with download_cols[1]:
+                    st.write("**Post-Survey**")
+                    st.download_button(
+                        label="📥 Excel Data",
                         data=post_data,
                         file_name="Post_Survey_Merged.xlsx",
                         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                        use_container_width=True
+                        use_container_width=True,
+                        key="dl_post_data"
                     )
-            elif has_pre:
-                st.download_button(
-                    label="📥 Download PRE-Survey Data",
-                    data=pre_data,
-                    file_name="Pre_Survey_Merged.xlsx",
-                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                    use_container_width=True
-                )
-            elif has_post:
-                st.download_button(
-                    label="📥 Download POST-Survey Data",
-                    data=post_data,
-                    file_name="Post_Survey_Merged.xlsx",
-                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                    use_container_width=True
-                )
+                    # Generate Post Dict
+                    post_dict_io = generate_docx_dictionary(post_merged_df)
+                    st.download_button(
+                        label="📘 Data Dictionary (DOCX)",
+                        data=post_dict_io,
+                        file_name="Post_Survey_Dictionary.docx",
+                        mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                        use_container_width=True,
+                        key="dl_post_dict"
+                    )
             
             st.divider()
             
@@ -242,7 +264,10 @@ def clean_for_spss(df, prefix):
     Cleans DataFrame for SPSS:
     1. Removes 'RecordID (Value)' column.
     2. Renames 'RecordID (Label)' -> 'RecordID'.
-    3. Renames other columns Qx... -> prefix_Qx...
+    3. For all other questions:
+       - DROPS the Text Label column (e.g. "Q1 (Label)")
+       - KEEPS the Numeric Value column (e.g. "Q1 (Value)")
+       - Renames the Value column to "{prefix}_{Qnumber}" (e.g. pre_Q1)
     """
     # 1 & 2. Handle RecordID
     # Drop Value version
@@ -255,34 +280,31 @@ def clean_for_spss(df, prefix):
         
     # 3. Rename others
     new_cols = {}
+    cols_to_drop = []
+    
     for col in df.columns:
         if col == "RecordID":
             continue
             
         # Regex to find Q numbers (e.g. "Q1. Question Text (Value)")
-        # We capture "Q" + digits
         match = re.match(r"^(Q\d+)", col)
         if match:
             q_part = match.group(1) # e.g. Q1
             
-            # Preserve suffix to distinguish Value/Label if needed, 
-            # or just use Q number if user implies 1:1 mapping (but we have 2 cols per Q)
-            # User said: "Rename the remaining columns to pre or post_Qx. Example: pre_Q22, post_Q3"
-            # If we map TWO columns to ONE name, we lose data.
-            # I will assume we suffix: pre_Q1_Value, pre_Q1_Label
-            # But the user example "pre_Q22" is clean.
-            # Let's clean the suffix too.
+            if "(Label)" in col:
+                # DROP text labels for SPSS
+                cols_to_drop.append(col)
             
-            suffix = ""
-            if "(Value)" in col:
-                suffix = "" # Assume Value is the "main" one
-            elif "(Label)" in col:
-                suffix = "_Label"
+            elif "(Value)" in col:
+                # KEEP numerical values and rename
+                # e.g. pre_Q1
+                new_name = f"{prefix}_{q_part}"
+                new_cols[col] = new_name
             
-            new_name = f"{prefix}_{q_part}{suffix}"
-            new_cols[col] = new_name
-            
+    # Apply changes
+    df = df.drop(columns=cols_to_drop)
     df = df.rename(columns=new_cols)
+    
     return df
 
 if spss_pre_file:
