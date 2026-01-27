@@ -90,7 +90,8 @@ if process_btn:
                 # Reset file pointers just in case
                 pre_values_file.seek(0)
                 pre_labels_file.seek(0)
-                pre_merged_df = process_survey_data(pre_values_file, pre_labels_file)
+                # Pass 'pre' to trigger Q22 -> RecordID (pre) renaming
+                pre_merged_df = process_survey_data(pre_values_file, pre_labels_file, dataset_name='pre')
                 
                 # Generate Output
                 pre_output = io.BytesIO()
@@ -104,7 +105,8 @@ if process_btn:
             if has_post:
                 post_values_file.seek(0)
                 post_labels_file.seek(0)
-                post_merged_df = process_survey_data(post_values_file, post_labels_file)
+                # Pass 'post' to trigger Q22 -> RecordID (post) renaming
+                post_merged_df = process_survey_data(post_values_file, post_labels_file, dataset_name='post')
                 
                 # Generate Output
                 post_output = io.BytesIO()
@@ -170,19 +172,40 @@ if process_btn:
             st.write("---")
             st.subheader("Dataset Statistics")
             
-            # Calculate Counts
+            # Calculate Counts & Duplicates
+            # Helper to find ID column for duplicates
+            def count_duplicates(df, dataset_name):
+                if df is None: return 0
+                # Look for column starting with RecordID and ending with (Value)
+                # The format we set is "RecordID ({dataset_name}) (Value)"
+                target_col = f"RecordID ({dataset_name}) (Value)"
+                if target_col in df.columns:
+                    return df.duplicated(subset=[target_col]).sum()
+                return 0
+
             num_pre = len(pre_merged_df) if has_pre and pre_merged_df is not None else 0
             num_post = len(post_merged_df) if has_post and post_merged_df is not None else 0
             total_rows = num_pre + num_post
             
-            kpi1, kpi2, kpi3 = st.columns(3)
+            dupe_pre = count_duplicates(pre_merged_df, 'pre')
+            dupe_post = count_duplicates(post_merged_df, 'post')
             
+            # Row 1: Counts
+            kpi1, kpi2, kpi3 = st.columns(3)
             with kpi1:
                 st.metric(label="Total Combined Rows", value=total_rows)
             with kpi2:
                 st.metric(label="Pre-Survey Rows", value=num_pre)
             with kpi3:
                 st.metric(label="Post-Survey Rows", value=num_post)
+                
+            # Row 2: Duplicates
+            st.caption("Duplicate Detection based on 'RecordID' column:")
+            d1, d2, d3 = st.columns(3)
+            with d2:
+                st.metric(label="Pre-Survey Duplicates", value=dupe_pre, delta_color="inverse")
+            with d3:
+                st.metric(label="Post-Survey Duplicates", value=dupe_post, delta_color="inverse")
 
     except Exception as e:
         st.error(f"An error occurred during processing: {str(e)}")

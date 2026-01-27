@@ -1,13 +1,14 @@
 import pandas as pd
 import io
 
-def process_survey_data(values_file, labels_file):
+def process_survey_data(values_file, labels_file, dataset_name=None):
     """
     Merges Qualtrics values and labels datasets into a single DataFrame.
     
     Args:
         values_file: File-like object or path for the Values CSV.
         labels_file: File-like object or path for the Labels CSV.
+        dataset_name: Optional string ('pre' or 'post') to customize headers (e.g. Q22 -> RecordID)
         
     Returns:
         pd.DataFrame: The cleaned and merged DataFrame.
@@ -40,7 +41,13 @@ def process_survey_data(values_file, labels_file):
         # Clean up potential NaNs or non-strings if any
         q = str(qid).strip()
         t = str(question).strip()
-        new_headers.append(f"{q}. {t}")
+        
+        # Custom Header Logic for Q22 (RecordID)
+        # If dataset_name key is provided (e.g. 'pre' or 'post'), rename Q22
+        if dataset_name and q.startswith("Q22"):
+             new_headers.append(f"RecordID ({dataset_name})")
+        else:
+             new_headers.append(f"{q}. {t}")
     
     # 4. Filter Data Rows
     # Rows 0, 1, 2 are headers/metadata. Data starts at row 3.
@@ -80,5 +87,17 @@ def process_survey_data(values_file, labels_file):
         
         merged_data[f"{header} (Value)"] = col_val
         merged_data[f"{header} (Label)"] = col_lab
+        
+    # Heuristic Check: Do the Label columns look numeric?
+    # We check a few columns in the middle
+    num_numeric_labels = 0
+    check_cols = [c for c in merged_data.columns if "(Label)" in c][:5] # Check first 5 label cols
+    for c in check_cols:
+        # Check if column is numeric-like (digits)
+        if pd.to_numeric(merged_data[c], errors='coerce').notna().sum() > (len(merged_data) * 0.8):
+             num_numeric_labels += 1
+             
+    if num_numeric_labels > 0:
+        print("WARNING: It appears your Label columns contain numeric values. Please check if you uploaded the correct 'Labels' file (Choice Text).")
 
     return merged_data
