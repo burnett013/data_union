@@ -196,21 +196,23 @@ if process_btn:
             
             # Calculate Counts & Duplicates
             # Helper to find ID column for duplicates
-            def count_duplicates(df, dataset_name):
-                if df is None: return 0
+            def get_duplicates(df):
+                if df is None: return 0, []
                 # Look for column starting with RecordID and ending with (Value)
-                # The format we set is "RecordID (Value)"
                 target_col = "RecordID (Value)"
                 if target_col in df.columns:
-                    return df.duplicated(subset=[target_col]).sum()
-                return 0
+                    dupes = df[df.duplicated(subset=[target_col], keep=False)]
+                    if not dupes.empty:
+                        # Return count and list of unique duplicate IDs
+                        return len(dupes), dupes[target_col].unique().tolist()
+                return 0, []
 
             num_pre = len(pre_merged_df) if has_pre and pre_merged_df is not None else 0
             num_post = len(post_merged_df) if has_post and post_merged_df is not None else 0
             total_rows = num_pre + num_post
             
-            dupe_pre = count_duplicates(pre_merged_df, 'pre')
-            dupe_post = count_duplicates(post_merged_df, 'post')
+            dupe_count_pre, dupes_pre_list = get_duplicates(pre_merged_df)
+            dupe_count_post, dupes_post_list = get_duplicates(post_merged_df)
             
             # Row 1: Counts
             kpi1, kpi2, kpi3 = st.columns(3)
@@ -225,9 +227,15 @@ if process_btn:
             st.caption("Duplicate Detection based on 'RecordID' column:")
             d1, d2, d3 = st.columns(3)
             with d2:
-                st.metric(label="Pre-Survey Duplicates", value=dupe_pre, delta_color="inverse")
+                st.metric(label="Pre-Survey Duplicates", value=dupe_count_pre, delta_color="inverse")
+                if dupe_count_pre > 0:
+                     with st.expander("View Pre-Survey Duplicates"):
+                          st.write(dupes_pre_list)
             with d3:
-                st.metric(label="Post-Survey Duplicates", value=dupe_post, delta_color="inverse")
+                st.metric(label="Post-Survey Duplicates", value=dupe_count_post, delta_color="inverse")
+                if dupe_count_post > 0:
+                     with st.expander("View Post-Survey Duplicates"):
+                          st.write(dupes_post_list)
 
     except Exception as e:
         st.error(f"An error occurred during processing: {str(e)}")
@@ -273,6 +281,8 @@ def clean_for_spss(df, prefix):
     # Drop Value version
     if "RecordID (Value)" in df.columns:
         df = df.drop(columns=["RecordID (Value)"])
+    if "RecordID" in df.columns: # Sometimes merged file might have it as just RecordID if saved that way?
+         pass # Actually clean_for_spss is typically run on the merged output which has (Value) and (Label)
     
     # Rename Label version
     if "RecordID (Label)" in df.columns:
@@ -340,3 +350,14 @@ if spss_post_file:
         col_spss_post.success("Ready for download!")
     except Exception as e:
         col_spss_post.error(f"Error: {e}")
+
+# --- Footer ---
+st.write("---")
+st.markdown(
+    """
+    <div style='text-align: center; color: grey; font-size: small;'>
+        Version 1.1 | Updated: 2026-01-28 09:10 CST
+    </div>
+    """,
+    unsafe_allow_html=True
+)

@@ -1,0 +1,6 @@
+﻿Reading artifacts/original_pre_values.csv...
+Shape: (101, 37)
+Column R (Index 17) Head (Raw):
+['Q2', 'Enter your anonymous four-digit ID number below:', '{"ImportId":"QID2_TEXT"}', '1042', '1067', '1044', '1083', '1017', '1088', '1061']
+Sample of values starting row 3:
+['1042', '1067', '1044', '1083', '1017', '1088', '1061']

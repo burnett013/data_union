@@ -1,0 +1,3 @@
+﻿--- Diagnosing Williams Data (Pre-Survey) ---
+Q22 found at indices (relative to data start): []
+Q22 NOT FOUND in labels!

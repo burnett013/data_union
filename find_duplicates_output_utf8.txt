@@ -1,0 +1,7 @@
+﻿--- Searching for Specific Values in Williams Data ---
+
+Scanning Pre-Survey (pre_values.csv) for ['1046', '1019']...
+Error Pre: [Errno 2] No such file or directory: 'artifacts/williams_data/pre_values.csv'
+
+Scanning Post-Survey (post_values.csv) for ['1023', '1011']...
+Error Post: [Errno 2] No such file or directory: 'artifacts/williams_data/post_values.csv'

@@ -1,0 +1,1818 @@
+
+[     UTC     ] Logs for dataunion.streamlit.app/
+────────────────────────────────────────────────────────────────────────────────────────
+[21:35:46] 🚀 Starting up repository: 'data_union', branch: 'main', main module: 'app.py'
+[21:35:46] 🐙 Cloning repository...
+[21:35:46] 🐙 Cloning into '/mount/src/data_union'...
+
+[21:35:46] 🐙 Cloned repository!
+[21:35:46] 🐙 Pulling code changes from Github...
+[21:35:47] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.13.11 environment at /home/adminuser/venv
+Resolved 39 packages in 470ms
+Prepared 39 packages in 1.56s
+Installed 39 packages in 81ms
+ + altair==6.0.0
+ + attrs==25.4.0
+ + blinker==1.9.0
+ + cachetools==6.2.6
+ + certifi==2026.1.4
+ + charset-normalizer==3.4.4
+ + click==8.3.1
+ + et-xmlfile==2.0.0
+ + gitdb==4.0.12
+ + gitpython==3.1.46
+ + idna==3.11
+ + jinja2==3.1.6
+ + jsonschema==4.26.0
+ + jsonschema-specifications==[2026-01-27 21:35:49.636166] 2025.9.1
+ + markupsafe==3.0.3
+ + narwhals==2.15.0
+ + numpy==2.4.1
+ + openpyxl==3.1.5
+ + packaging==26.0
+ + pandas==2.3.3
+ + pillow==12.1.0
+ + protobuf==6.33.4
+ + pyarrow==23.0.0
+ + pydeck==0.9.1
+ + python-dateutil==2.9.0.post0
+ +[2026-01-27 21:35:49.636399]  pytz==2025.2
+ + referencing==0.37.0
+ + requests==2.32.5
+ + rpds-py==0.30.0
+ + six==1.17.0
+ + smmap==5.0.2
+ + streamlit==1.53.1[2026-01-27 21:35:49.636661] 
+ + tenacity==9.1.2
+ + toml==0.10.2
+ + tornado==6.5.4
+ + typing-extensions==4.15.0
+ + tzdata==2025.3
+ + urllib3[2026-01-27 21:35:49.636851] ==2.6.3
+ + watchdog==6.0.0
+Checking if Streamlit is installed
+Found Streamlit version 1.53.1 in the environment
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.13.11 environment at /home/adminuser/venv
+Resolved 4 packages in 142ms
+Prepared 4 packages in 137ms
+Installed 4 packages in 13ms
+ + markdown-it-py==4.0.0
+ + mdurl==0.1.2
+ + pygments==2.19.2
+ [2026-01-27 21:35:51.446610] + rich==14.3.1
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[21:35:52] 🐍 Python dependencies were installed from /mount/src/data_union/requirements.txt using uv.
+Check if streamlit is installed
+Streamlit is already installed
+[21:35:53] 📦 Processed dependencies!
+
+
+
+2026-01-27 21:36:38.639 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-27 21:36:38.666 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-27 21:37:51.379 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-27 21:37:51.386 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+[21:48:19] 🐙 Pulling code changes from Github...
+[21:48:19] 📦 Processing dependencies...
+[21:48:19] 📦 Processed dependencies!
+[21:48:20] 🔄 Updated app!
+2026-01-27 21:49:31.391 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-27 21:49:31.398 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-27 21:49:36.664 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-27 21:49:36.671 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-27 21:56:13.699 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-27 21:56:13.706 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-27 22:21:49.852 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-27 22:21:49.858 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-27 22:22:30.678 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-27 22:22:30.684 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+[22:23:54] 🐙 Pulling code changes from Github...
+[22:23:55] 📦 Processing dependencies...
+[22:23:55] 📦 Processed dependencies!
+WARNING: It appears your Label columns contain numeric values. Please check if you uploaded the correct 'Labels' file (Choice Text).
+WARNING: It appears your Label columns contain numeric values. Please check if you uploaded the correct 'Labels' file (Choice Text).
+WARNING: It appears your Label columns contain numeric values. Please check if you uploaded the correct 'Labels' file (Choice Text).
+WARNING: It appears your Label columns contain numeric values. Please check if you uploaded the correct 'Labels' file (Choice Text).
+WARNING: It appears your Label columns contain numeric values. Please check if you uploaded the correct 'Labels' file (Choice Text).
+WARNING: It appears your Label columns contain numeric values. Please check if you uploaded the correct 'Labels' file (Choice Text).
+WARNING: It appears your Label columns contain numeric values. Please check if you uploaded the correct 'Labels' file (Choice Text).
+WARNING: It appears your Label columns contain numeric values. Please check if you uploaded the correct 'Labels' file (Choice Text).
+WARNING: It appears your Label columns contain numeric values. Please check if you uploaded the correct 'Labels' file (Choice Text).
+WARNING: It appears your Label columns contain numeric values. Please check if you uploaded the correct 'Labels' file (Choice Text).
+WARNING: It appears your Label columns contain numeric values. Please check if you uploaded the correct 'Labels' file (Choice Text).
+WARNING: It appears your Label columns contain numeric values. Please check if you uploaded the correct 'Labels' file (Choice Text).
+WARNING: It appears your Label columns contain numeric values. Please check if you uploaded the correct 'Labels' file (Choice Text).
+WARNING: It appears your Label columns contain numeric values. Please check if you uploaded the correct 'Labels' file (Choice Text).
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data                              
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+[22:23:56] 🔄 Updated app!
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+[22:25:51] ❗️ 
+2026-01-27 22:25:51.240 503 GET /script-health-check (127.0.0.1) 281.00ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:25:56.235 503 GET /script-health-check (127.0.0.1) 282.64ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:26:01.307 503 GET /script-health-check (127.0.0.1) 327.64ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:26:06.251 503 GET /script-health-check (127.0.0.1) 281.56ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:26:11.267 503 GET /script-health-check (127.0.0.1) 286.18ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:26:16.233 503 GET /script-health-check (127.0.0.1) 275.29ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:26:21.248 503 GET /script-health-check (127.0.0.1) 282.26ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:26:26.241 503 GET /script-health-check (127.0.0.1) 281.58ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:26:31.252 503 GET /script-health-check (127.0.0.1) 290.33ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:26:36.234 503 GET /script-health-check (127.0.0.1) 277.48ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:26:41.270 503 GET /script-health-check (127.0.0.1) 290.60ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:26:46.272 503 GET /script-health-check (127.0.0.1) 307.79ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:26:51.269 503 GET /script-health-check (127.0.0.1) 288.98ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:26:56.348 503 GET /script-health-check (127.0.0.1) 355.90ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:27:01.263 503 GET /script-health-check (127.0.0.1) 283.91ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:27:06.258 503 GET /script-health-check (127.0.0.1) 285.13ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:27:11.272 503 GET /script-health-check (127.0.0.1) 291.86ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:27:16.250 503 GET /script-health-check (127.0.0.1) 282.36ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:27:21.287 503 GET /script-health-check (127.0.0.1) 317.15ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:27:26.241 503 GET /script-health-check (127.0.0.1) 285.63ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:27:31.268 503 GET /script-health-check (127.0.0.1) 288.00ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:27:36.213 503 GET /script-health-check (127.0.0.1) 270.68ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:27:41.286 503 GET /script-health-check (127.0.0.1) 291.69ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:27:46.272 503 GET /script-health-check (127.0.0.1) 309.29ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:27:51.252 503 GET /script-health-check (127.0.0.1) 273.19ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:27:56.285 503 GET /script-health-check (127.0.0.1) 303.72ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:28:01.326 503 GET /script-health-check (127.0.0.1) 311.17ms
+[22:28:02] 🐙 Pulling code changes from Github...
+[22:28:03] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.13.11 environment at /home/adminuser/venv
+Resolved 41 packages in 247ms
+Prepared 2 packages in 153ms
+Installed 2 packages in 8ms
+ + lxml==6.0.2
+ + python-docx==1.2.0
+Checking if Streamlit is installed
+Found Streamlit version 1.53.1 in the environment
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.13.11 environment at /home/adminuser/venv
+Audited 1 package in 1ms
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[22:28:05] 🐍 Python dependencies were installed from /mount/src/data_union/requirements.txt using uv.
+[22:28:05] 📦 Processed dependencies!
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+  Stopping...
+2026-01-27 22:28:06.305 503 GET /script-health-check (127.0.0.1) 287.89ms
+
+
+
+[22:28:08] 🔄 Updated app!
+[22:28:10] 🐙 Pulling code changes from Github...
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+[22:28:11] 📦 Processing dependencies...
+[22:28:11] 📦 Processed dependencies!
+[22:28:11] ❗️ 
+2026-01-27 22:28:11.628 503 GET /script-health-check (127.0.0.1) 2534.80ms
+[22:28:12] 🔄 Updated app!
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:28:14.348 503 GET /script-health-check (127.0.0.1) 269.82ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:28:19.325 503 GET /script-health-check (127.0.0.1) 258.94ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:28:24.358 503 GET /script-health-check (127.0.0.1) 282.13ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:28:29.309 503 GET /script-health-check (127.0.0.1) 240.83ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:28:34.344 503 GET /script-health-check (127.0.0.1) 262.69ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:28:39.349 503 GET /script-health-check (127.0.0.1) 251.09ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:28:44.327 503 GET /script-health-check (127.0.0.1) 269.27ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:28:49.325 503 GET /script-health-check (127.0.0.1) 245.85ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:28:54.341 503 GET /script-health-check (127.0.0.1) 252.17ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:28:59.326 503 GET /script-health-check (127.0.0.1) 250.37ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:29:04.327 503 GET /script-health-check (127.0.0.1) 254.09ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:29:09.355 503 GET /script-health-check (127.0.0.1) 263.77ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:29:14.329 503 GET /script-health-check (127.0.0.1) 254.46ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:29:19.382 503 GET /script-health-check (127.0.0.1) 304.20ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:29:24.373 503 GET /script-health-check (127.0.0.1) 287.88ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:29:29.352 503 GET /script-health-check (127.0.0.1) 263.68ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:29:34.319 503 GET /script-health-check (127.0.0.1) 253.07ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:29:39.316 503 GET /script-health-check (127.0.0.1) 247.47ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:29:44.326 503 GET /script-health-check (127.0.0.1) 245.06ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:29:49.310 503 GET /script-health-check (127.0.0.1) 250.53ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:29:54.336 503 GET /script-health-check (127.0.0.1) 263.33ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:29:59.345 503 GET /script-health-check (127.0.0.1) 253.59ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:30:04.326 503 GET /script-health-check (127.0.0.1) 248.93ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:30:09.338 503 GET /script-health-check (127.0.0.1) 253.21ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:30:14.350 503 GET /script-health-check (127.0.0.1) 272.29ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:30:19.351 503 GET /script-health-check (127.0.0.1) 286.27ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:30:24.326 503 GET /script-health-check (127.0.0.1) 243.15ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:30:29.369 503 GET /script-health-check (127.0.0.1) 268.45ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:30:34.340 503 GET /script-health-check (127.0.0.1) 266.39ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:30:39.328 503 GET /script-health-check (127.0.0.1) 257.30ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:30:44.322 503 GET /script-health-check (127.0.0.1) 258.13ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:30:49.300 503 GET /script-health-check (127.0.0.1) 239.51ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:30:54.324 503 GET /script-health-check (127.0.0.1) 254.68ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:30:59.351 503 GET /script-health-check (127.0.0.1) 265.65ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:31:04.307 503 GET /script-health-check (127.0.0.1) 234.01ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:31:09.328 503 GET /script-health-check (127.0.0.1) 252.13ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:31:14.312 503 GET /script-health-check (127.0.0.1) 249.84ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:31:19.374 503 GET /script-health-check (127.0.0.1) 279.02ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:31:24.319 503 GET /script-health-check (127.0.0.1) 257.66ms
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:672 in code_to_exec                                     
+                                                                                
+  /mount/src/data_union/app.py:4 in <module>                                    
+                                                                                
+      1 import streamlit as st                                                  
+      2 import pandas as pd                                                     
+      3 import io                                                               
+  ❱   4 from processing import process_survey_data, generate_docx_dictionary    
+      5                                                                         
+      6 # --- Page Configuration ---                                            
+      7 st.set_page_config(                                                     
+────────────────────────────────────────────────────────────────────────────────
+ImportError: cannot import name 'generate_docx_dictionary' from 'processing' 
+(/mount/src/data_union/processing.py)
+2026-01-27 22:31:29.333 503 GET /script-health-check (127.0.0.1) 259.01ms
+[22:31:31] 🔌 Disconnecting...
+[22:31:38] 🖥 Provisioning machine...
+[22:31:44] 🎛 Preparing system...
+[22:31:45] ⛓ Spinning up manager process...
+[22:31:35] 🚀 Starting up repository: 'data_union', branch: 'main', main module: 'app.py'
+[22:31:35] 🐙 Cloning repository...
+[22:31:35] 🐙 Cloning into '/mount/src/data_union'...
+
+[22:31:35] 🐙 Cloned repository!
+[22:31:35] 🐙 Pulling code changes from Github...
+[22:31:35] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.13.11 environment at /home/adminuser/venv
+Resolved 41 packages in 393ms
+Prepared 41 packages in 1.59s
+Installed 41 packages in 78ms
+ + altair==6.0.0
+ + attrs==25.4.0
+ + blinker==1.9.0
+ + cachetools==6.2.6
+ + certifi==2026.1.4
+ + charset-normalizer==3.4.4
+ + click==8.3.1
+ + et-xmlfile==2.0.0
+ + gitdb==4.0.12
+ + gitpython==3.1.46
+ + idna==3.11
+ + jinja2==[2026-01-27 22:31:38.162513] 3.1.6
+ + jsonschema==4.26.0
+ + jsonschema-specifications==2025.9.1
+ + lxml==6.0.2
+ + markupsafe==3.0.3
+ + narwhals==2.15.0
+ + numpy==2.4.1
+ + openpyxl==3.1.5
+ + packaging==26.0
+ + pandas==2.3.3
+ + [2026-01-27 22:31:38.162762] pillow==12.1.0
+ + protobuf==6.33.4
+ + pyarrow==23.0.0
+ + pydeck==0.9.1
+ + python-dateutil==2.9.0.post0
+ + python-docx==1.2.0
+ + pytz==2025.2
+ + referencing==0.37.0
+ + requests==[2026-01-27 22:31:38.162953] 2.32.5
+ + rpds-py==0.30.0
+ + six==1.17.0
+ + smmap==5.0.2
+ + streamlit==1.53.1
+ + tenacity==9.1.2
+ + toml==0.10.2
+ + tornado==6.5.4
+ + typing-extensions==4.15.0[2026-01-27 22:31:38.163093] 
+ + tzdata==2025.3
+ + urllib3==2.6.3
+ + watchdog==6.0.0
+Checking if Streamlit is installed
+Found Streamlit version 1.53.1 in the environment
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.13.11 environment at /home/adminuser/venv
+Resolved 4 packages in 125ms
+Prepared 4 packages in 105ms
+Installed 4 packages in 13ms
+ + markdown-it-py==4.0.0
+ + mdurl==0.1.2
+ + pygments==2.19.2
+ + rich==14.3.1
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[22:31:40] 🐍 Python dependencies were installed from /mount/src/data_union/requirements.txt using uv.
+Check if streamlit is installed
+Streamlit is already installed
+[22:31:41] 📦 Processed dependencies!
+
+

@@ -1,0 +1,8 @@
+﻿Propagating from: C:\Users\burne\iCloudDrive\Desktop\X03.27.25\UT_Tyler\qualtrics_union\bowen_j_project\qualtrics_union
+FOUND FILE AT: C:\Users\burne\iCloudDrive\Desktop\X03.27.25\UT_Tyler\qualtrics_union\bowen_j_project\qualtrics_union\pre_set\pre_values.csv
+
+Scanning found file for ['1046', '1019']...
+  FOUND '1046' at:
+    Row: 46, Col: 17
+  FOUND '1019' at:
+    Row: 7, Col: 17

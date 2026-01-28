@@ -1,0 +1,21 @@
+﻿--- Diagnosing Pre-Survey RecordID ---
+QIDs (first 10): ['Q22' 'Q23' 'Q24' 'Q25' 'Q26' 'Q1' 'Q2' 'Q3' 'Q4' 'Q5']
+Q22 found at index 0 in the slice (column 17 in file)
+
+Raw values in Q22 column (Top 20):
+['1080', '1096', '1083', '1005', '1019', '1053', '1017', '1032', '1081', '1026', '1082', '1004', '1006', '1016', '1072', '1067', '1088', '1054', '1033', '1069']
+
+Total rows: 96
+Unique raw values count: 96
+
+Raw Duplicates (0):
+No raw duplicates found.
+
+--- Processed Data ---
+WARNING: It appears your Label columns contain numeric values. Please check if you uploaded the correct 'Labels' file (Choice Text).
+Processed RecordID column type: object
+Processed values (Top 20):
+['1080', '1096', '1083', '1005', '1019', '1053', '1017', '1032', '1081', '1026', '1082', '1004', '1006', '1016', '1072', '1067', '1088', '1054', '1033', '1069']
+
+Processed Duplicates (0):
+Series([], Name: RecordID (Value), dtype: object)

@@ -1,0 +1,9 @@
+﻿CWD: C:\Users\burne\iCloudDrive\Desktop\X03.27.25\UT_Tyler\qualtrics_union\bowen_j_project\qualtrics_union
+Contents of 'artifacts':
+['bowen_dict.xlsx', 'combined_example_1.csv', 'combined_example_2.csv', 'logs-burnett013-data_union-main-app.py-2026-01-27T22_34_29.480Z.txt', 'New folder', 'williams_data']
+  Contents of 'New folder':
+  []
+  Contents of 'williams_data':
+  ['Post_Survey_Merged.xlsx', 'Pre_Survey_Merged.xlsx']
+
+Target file artifacts\williams_data\pre_values.csv still NOT FOUND via os.path.exists().

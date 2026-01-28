@@ -1,0 +1,3 @@
+﻿--- Verifying Fix with Original Pre Values ---
+Processing artifacts/original_pre_values.csv...
+Processing Error: single positional indexer is out-of-bounds

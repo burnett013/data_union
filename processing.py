@@ -37,14 +37,14 @@ def process_survey_data(values_file, labels_file, dataset_name=None):
     # 3. Build new Composite Header
     # Format: "Qx. Question Text"
     new_headers = []
-    for qid, question in zip(qids, questions):
+    for i, (qid, question) in enumerate(zip(qids, questions)):
         # Clean up potential NaNs or non-strings if any
         q = str(qid).strip()
         t = str(question).strip()
         
-        # Custom Header Logic for Q22 (RecordID)
-        # If dataset_name key is provided (e.g. 'pre' or 'post'), rename Q22
-        if dataset_name and q.startswith("Q22"):
+        # STRICT Logic for RecordID: Always Index 0 in this sliced list?
+        # WAIT: qids/questions are slices starting from 17. So index 0 of this loop IS Column 17.
+        if i == 0:
              new_headers.append("RecordID")
         else:
              new_headers.append(f"{q}. {t}")
@@ -74,7 +74,10 @@ def process_survey_data(values_file, labels_file, dataset_name=None):
         col_val = col_val.replace('nan', '')
         col_lab = col_lab.replace('nan', '')
         
-        if i > 0:
+        if header == "RecordID":
+             # Force string type, strip whitespace, handle nan
+             col_val = col_val.astype(str).str.strip().replace('nan', '')
+        elif i > 0:
             # For non-identifier columns, convert Values to numeric (int)
             # errors='coerce' turns non-numeric to NaN
             col_val = pd.to_numeric(col_val, errors='coerce').astype('Int64')

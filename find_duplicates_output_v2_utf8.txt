@@ -1,0 +1,4 @@
+﻿Current Working Directory: C:\Users\burne\iCloudDrive\Desktop\X03.27.25\UT_Tyler\qualtrics_union\bowen_j_project\qualtrics_union
+Target Directory: C:\Users\burne\iCloudDrive\Desktop\X03.27.25\UT_Tyler\qualtrics_union\bowen_j_project\qualtrics_union\artifacts\williams_data
+Pre-Survey file not found: C:\Users\burne\iCloudDrive\Desktop\X03.27.25\UT_Tyler\qualtrics_union\bowen_j_project\qualtrics_union\artifacts\williams_data\pre_values.csv
+Post-Survey file not found: C:\Users\burne\iCloudDrive\Desktop\X03.27.25\UT_Tyler\qualtrics_union\bowen_j_project\qualtrics_union\artifacts\williams_data\post_values.csv

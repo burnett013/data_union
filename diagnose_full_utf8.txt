@@ -1,0 +1,33 @@
+﻿--- Checking All Columns for Duplicates (Pre-Survey) ---
+Total Columns inspected: 26
+
+--- Potential RecordID Columns ---
+QID: Q22, Text: Please enter your anonymous ID number., Index: 0
+QID: Q9, Text: Some "poor" people live better than I do, considering all their benefits., Index: 13
+
+--- Columns with Non-Empty Duplicates ---
+[Q23] What is your age?: ['4' '5' '6']
+[Q24] Gender: ['2' '1']
+[Q25] Ethnicity: ['1' '2' '4' '8' '3']
+[Q26] Financial Security: ['3' '1' '2' '4' '6' '5']
+[Q1] Poor people are different from the rest of society.: ['4' '3' '5' '2']
+[Q2] Poor people are dishonest.: ['4' '5' '3' '2']
+[Q3] Most poor people are dirty.: ['4' '3' '5' '2']
+[Q4] Poor people act differently.: ['3' '2' '5' '4']
+[Q5] Children raised on welfare will never amount to anything.: ['5' '4' '2' '3']
+[Q6] I believe poor people have a different set of values than other people have.: ['4' '3' '5' '2']
+[Q7] Poor people generally have lower intelligence than non-poor people.: ['5' '3' '4' '2']
+[Q8] There is a lot of fraud among welfare recipients.: ['4' '3' '5' '2' '1']
+[Q9] Some "poor" people live better than I do, considering all their benefits.: ['3' '5' '4' '2' '1']
+[Q10] Poor people think they deserve to be supported.: ['4' '3' '5' '1' '2']
+[Q11] Welfare mothers have babies to get more money.: ['5' '3' '2' '4' '1']
+[Q12] An able-bodied person collecting welfare is ripping off the system.: ['4' '3' '5' '2' '1']
+[Q13] Unemployed poor people could find jobs if they tried harder.: ['4' '3' '5' '2' '1']
+[Q14] Welfare makes people lazy.: ['3' '4' '5' '2' '1']
+[Q15] Benefits for poor people consume a major part of the federal budget.: ['4' '3' '5' '2' '1']
+[Q16] People are poor due to circumstances beyond their control.: ['2' '3' '1' '4']
+[Q17] I would support a program that resulted in higher taxes to support social programs for poor people.: ['2' '3' '5' '1' '4']
+[Q18] If I were poor, I would accept welfare benefits.: ['2' '3' '1' '4']
+[Q19] Poor people should not be blamed for their misfortune.: ['2' '3' '1' '4']
+[Q20] Society has the responsibility of helping poor people.: ['2' '3' '1' '4' '5']
+[Q21] Poor people are discriminated against.: ['1' '3' '2' '4']
