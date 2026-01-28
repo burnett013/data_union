@@ -297,7 +297,7 @@ def clean_for_spss(df, prefix):
             continue
             
         # Regex to find Q numbers (e.g. "Q1. Question Text (Value)")
-        match = re.match(r"^(Q\d+)", col)
+        match = re.match(r"^(Q[\d_]+)", col)
         if match:
             q_part = match.group(1) # e.g. Q1
             
