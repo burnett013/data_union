@@ -68,9 +68,9 @@ with st.sidebar:
     post_values_file = st.file_uploader("Upload 'Numeric Values' CSV", type=['csv'], key="post_values")
 
     st.markdown("---")
-    
     st.header("3. Settings")
-    unique_id_col = st.text_input("Unique ID Column Name", value="Q2", help="Enter the exact column name that contains the unique identifier (e.g., 'Q2' or 'ResponseId')")
+    pre_unique_id_col = st.text_input("Pre-Survey Unique ID Column", value="Q2", help="Exact column name containing the unique identifier in the Pre-Survey (e.g., 'Q2')")
+    post_unique_id_col = st.text_input("Post-Survey Unique ID Column", value="Q2", help="Exact column name containing the unique identifier in the Post-Survey (e.g., 'Q2')")
 
     st.markdown("---")
     process_btn = st.button("🚀 Process & Merge Data", type="primary")
@@ -96,7 +96,7 @@ if process_btn:
                 pre_values_file.seek(0)
                 pre_labels_file.seek(0)
                 # Pass 'pre' to trigger Q22 -> RecordID (pre) renaming
-                pre_merged_df = process_survey_data(pre_values_file, pre_labels_file, dataset_name='pre', unique_id_col=unique_id_col)
+                pre_merged_df = process_survey_data(pre_values_file, pre_labels_file, dataset_name='pre', unique_id_col=pre_unique_id_col)
                 
                 # Generate Output
                 pre_output = io.BytesIO()
@@ -111,7 +111,7 @@ if process_btn:
                 post_values_file.seek(0)
                 post_labels_file.seek(0)
                 # Pass 'post' to trigger Q22 -> RecordID (post) renaming
-                post_merged_df = process_survey_data(post_values_file, post_labels_file, dataset_name='post', unique_id_col=unique_id_col)
+                post_merged_df = process_survey_data(post_values_file, post_labels_file, dataset_name='post', unique_id_col=post_unique_id_col)
                 
                 # Generate Output
                 post_output = io.BytesIO()
