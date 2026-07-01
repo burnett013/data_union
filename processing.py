@@ -1,7 +1,7 @@
 import pandas as pd
 import io
 
-def process_survey_data(values_file, labels_file, dataset_name=None):
+def process_survey_data(values_file, labels_file, dataset_name=None, unique_id_col='Q2'):
     """
     Merges Qualtrics values and labels datasets into a single DataFrame.
     
@@ -37,17 +37,20 @@ def process_survey_data(values_file, labels_file, dataset_name=None):
     # 3. Build new Composite Header
     # Format: "Qx. Question Text"
     new_headers = []
+    unique_id_found = False
     for i, (qid, question) in enumerate(zip(qids, questions)):
         # Clean up potential NaNs or non-strings if any
         q = str(qid).strip()
         t = str(question).strip()
         
-        # STRICT Logic for RecordID: Always Index 0 in this sliced list?
-        # WAIT: qids/questions are slices starting from 17. So index 0 of this loop IS Column 17.
-        if i == 0:
+        if q == unique_id_col.strip():
              new_headers.append("RecordID")
+             unique_id_found = True
         else:
              new_headers.append(f"{q}. {t}")
+             
+    if not unique_id_found:
+        raise ValueError(f"Unique ID column '{unique_id_col}' not found in the dataset (checked columns from index 17 onwards). Please verify the column name.")
     
     # 4. Filter Data Rows
     # Rows 0, 1, 2 are headers/metadata. Data starts at row 3.
@@ -77,7 +80,7 @@ def process_survey_data(values_file, labels_file, dataset_name=None):
         if header == "RecordID":
              # Force string type, strip whitespace, handle nan
              col_val = col_val.astype(str).str.strip().replace('nan', '')
-        elif i > 0:
+        else:
             # For non-identifier columns, convert Values to numeric (int)
             # errors='coerce' turns non-numeric to NaN
             col_val = pd.to_numeric(col_val, errors='coerce').astype('Int64')
