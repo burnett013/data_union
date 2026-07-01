@@ -361,7 +361,7 @@ st.write("---")
 st.markdown(
     """
     <div style='text-align: center; color: grey; font-size: small;'>
-        Version 1.2 | Updated: 2026-01-28 11:35 CST
+        Version 1.3 | Updated: 2026-07-01 14:05 CDT
     </div>
     """,
     unsafe_allow_html=True
